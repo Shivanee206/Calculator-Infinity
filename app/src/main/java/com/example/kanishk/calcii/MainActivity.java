@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 Button clear,delete,one,two,three,four,five,six,seven,eight,nine,zero,plus,minus,multiply,divide,equal,point;
     TextView view;
-    int opr1,opr2;
+    long opr1,opr2;
     boolean add,sub,div,mul;
     String chr;
     
@@ -124,25 +124,25 @@ Button clear,delete,one,two,three,four,five,six,seven,eight,nine,zero,plus,minus
                 view.append("0");
                 break;
             case R.id.plus:
-                opr1=Integer.parseInt(view.getText()+"");
+                opr1=Long.parseLong(view.getText()+"");
                 add=true;
                 view.setText(null);
                 //view.append("+");
                 break;
             case R.id.minus:
-                opr1=Integer.parseInt(view.getText()+"");
+                opr1=Long.parseLong(view.getText()+"");
                 sub=true;
                 view.setText(null);
                // view.append("-");
                 break;
             case R.id.multiply:
-                opr1=Integer.parseInt(view.getText()+"");
+                opr1=Long.parsLong(view.getText()+"");
                 mul=true;
                 view.setText(null);
                 //view.append("*");
                 break;
             case R.id.divide:
-                opr1=Integer.parseInt(view.getText()+"");
+                opr1=Long.parseLong(view.getText()+"");
                 div=true;
                 view.setText(null);
                 //view.append("/");
@@ -180,7 +180,7 @@ Button clear,delete,one,two,three,four,five,six,seven,eight,nine,zero,plus,minus
                     opr1=opr1^opr2;
                     view.setText(Integer.toString(opr1));
                 }*/
-                opr2=Integer.parseInt(view.getText()+"");
+                opr2=Long.parseLong(view.getText()+"");
                 if (add==true) {
                     view.setText(opr1+opr2+"");
                     add=false;
